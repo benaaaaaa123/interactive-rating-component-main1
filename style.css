@@ -1,0 +1,114 @@
+body {
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+.star {
+  background-color: hsl(213, 19%, 18%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+h1 {
+  color: white;
+  font-weight: 400;
+}
+p {
+  color: hsl(216, 12%, 54%);
+}
+#to1 img {
+  border-radius: 100%;
+}
+
+#przycisk {
+  width: 100%;
+  border-radius: 40px;
+  height: 50px;
+  margin-top: 30px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 3px;
+  background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
+}
+#przycisk:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+#to1 {
+  display: block;
+}
+#to2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+#sel {
+  margin-top: 30px;
+  background-color: hsl(217, 12%, 63%, 10%);
+  height: 30px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+#sel p {
+  color: hsl(25, 97%, 53%);
+}
+.appr p {
+  text-align: center;
+  font-size: 14px;
+}
+.container {
+  width: 350px;
+  height: 330px;
+  background-color: hsl(212, 21%, 14%);
+  padding: 30px;
+  border-radius: 25px;
+}
+.ocena {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.ocena1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: hsl(217, 12%, 63%);
+  transition: background-color 0.3s, color 0.3s;
+}
+.thx {
+  margin-bottom: -25px;
+  margin-top: 15px;
+}
+.ocena1:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+.ocena1.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+@media all and (max-width: 375px) {
+  .container {
+    padding: 20px;
+  }
+  .ocena1 {
+    width: 40px;
+    height: 40px;
+  }
+}

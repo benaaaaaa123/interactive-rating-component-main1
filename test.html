@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaznaczanie tylko jednego z pięciu divów</title>
+  <style>
+    .selected {
+      background-color: yellow; /* Kolor tła dla zaznaczonego diva */
+    }
+  </style>
+</head>
+<body>
+  <div class="selectable" onclick="selectDiv(this)">Element 1</div>
+  <div class="selectable" onclick="selectDiv(this)">Element 2</div>
+  <div class="selectable" onclick="selectDiv(this)">Element 3</div>
+  <div class="selectable" onclick="selectDiv(this)">Element 4</div>
+  <div class="selectable" onclick="selectDiv(this)">Element 5</div>
+
+  <script>
+    // Funkcja do zaznaczania divów
+    function selectDiv(selectedDiv) {
+      const divs = document.querySelectorAll('.selectable'); // Znajdź wszystkie divy o klasie 'selectable'
+      
+      // Usuń klasę 'selected' (zaznaczenie) z innych divów
+      divs.forEach(div => {
+        if (div !== selectedDiv) {
+          div.classList.remove('selected');
+        }
+      });
+
+      // Dodaj lub usuń klasę 'selected' w zależności od stanu zaznaczenia
+      if (selectedDiv.classList.contains('selected')) {
+        selectedDiv.classList.remove('selected');
+      } else {
+        selectedDiv.classList.add('selected');
+      }
+    }
+  </script>
+</body>
+</html>
